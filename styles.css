@@ -1,0 +1,49 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: black;
+  height: 100vh; /* Full height */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers horizontally */
+  text-align: center;
+  margin: 0;
+}
+
+h1, h2, h3 {
+  color: #3FFF05;
+  text-shadow: 0 0 3px #3FFF05;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px; /* Adjusts spacing */
+}
+
+p {
+  color: #3fff05;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Spacing between buttons */
+}
+
+.visit {
+  background-color: #3fff05;
+  color: black;
+  border: none;
+  padding: 8px 38px;
+  font-size: 18px;
+  height: 40px;
+  width: 300px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: 0 0 5px #3fff05;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-shadow: 0 0 2px black;
+  animation: slowFloat 4s infinite ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
