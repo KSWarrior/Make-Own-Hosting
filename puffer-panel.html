@@ -1,150 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VPS Installation Code</title>
+    <title>Install MC Server</title>
     <style>
         body {
+            background-color: #000;
+            color: #3fff05;
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
             text-align: center;
+            padding: 20px;
         }
         .container {
-            width: 80%;
-            margin: 50px auto;
+            max-width: 400px;
+            margin: auto;
+            background: #111;
             padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        .ks-gamer {
-            font-size: 25px;
-            font-weight: bold;
-            color: #2c21ff;
-            margin: 10px 0;
-            text-shadow: 0 0 15px #2c21ff, 0 0 30px #2c21ff, 0 0 45px rgba(44, 33, 255, 0.8);
-            transition: text-shadow 0.3s ease-in-out;
-        }
-        .ks-gamer:hover {
-            text-shadow: 0 0 25px #2c21ff, 0 0 50px #2c21ff, 0 0 75px rgba(44, 33, 255, 1);
-        }
-        .code-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #282c34;
-            color: #fff;
-            padding: 10px;
-            border-radius: 5px;
-            font-size: 14px;
-            margin-bottom: 10px;
-            overflow-x: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #3fff05;
         }
         pre {
-            margin: 0;
-            padding: 0;
-            border: none;
-            background: none;
-            color: inherit;
-            font-size: 14px;
-            flex-grow: 1;
+            background: #222;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
             text-align: left;
         }
-        .btn {
+        .copy {
+            background: #3fff05;
+            color: #000;
+            border: none;
             padding: 8px 16px;
-            background-color: #2c21ff;
-            color: white;
-            border: none;
-            border-radius: 5px;
+            font-size: 12px;
             cursor: pointer;
-            font-size: 14px;
-            font-weight: bold;
-            box-shadow: 0 0 10px #2c21ff;
-            transition: all 0.3s ease-in-out;
-            margin-left: 10px;
-        }
-        .btn:hover {
-            background-color: #2419e0;
-            box-shadow: 0 0 20px #2c21ff, 0 0 40px #2c21ff;
-        }
-        .info-text {
-            font-size: 18px;
-            font-weight: bold;
-            color: black;
-            margin: 20px 0;
-        }
-        /* Discord & YouTube Button */
-        .social-btn {
-            display: inline-block;
             margin-top: 10px;
-            padding: 12px 24px;
-            background-color: #2c21ff;
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            text-decoration: none;
-            box-shadow: 0 0 15px #2c21ff;
-            transition: all 0.3s ease-in-out;
+            border-radius: 5px;
         }
-        .social-btn:hover {
-            background-color: #2419e0;
-            box-shadow: 0 0 25px #2c21ff, 0 0 50px #2c21ff;
+        button:hover {
+            background: #2ecc04;
+        }
+        h1 {
+          font-size: 26px;
+        }
+        p {
+          color: lightgray;
+        }
+        .visit {
+          background: #3fff05;
+          color: #000;
+          border: none;
+          padding: 10px 18px;
+          font-size: 16px;
+          cursor: pointer;
+          margin-top: 10px;
+          border-radius: 5px;
         }
     </style>
 </head>
 <body>
-
-<div class="container">
-    <h1>VPS Installation Code</h1>
-    <p class="ks-gamer">KS Gamer</p>
-    <p>Click the button to copy the corresponding command.</p>
-
-    <div class="code-container">
-        <pre id="vps-code-1">wget https://github.com/KSWarrior/Make-Own-Hosting/releases/download/PufferPanel/puffer_panel_ks.sh && bash puffer_panel_ks.sh</pre>
-        <button class="btn" onclick="copyCode('vps-code-1')">Copy</button>
+    <h1>MC Server in CodeSandbox</h1>
+    <div class="container">
+      <p>Install Java and server.jar also starter</p>
+        <pre class="code">wget https://github.com/KSWarrior/MC-Server-without-hosting/releases/download/Codesandbox.io/ks-install.sh && bash ks-install.sh</pre>
+        <button class="copy" onclick="copyCode(this)">Copy Code</button>
     </div>
-
-    <div class="code-container">
-        <pre id="vps-code-2">apt update && apt upgrade -y</pre>
-        <button class="btn" onclick="copyCode('vps-code-2')">Copy</button>
+    <div class="container">
+      <p>Install playit.gg plugin</p>
+        <pre class="code">cd ks-server && mkdir plugins && cd plugins && wget https://github.com/playit-cloud/playit-minecraft-plugin/releases/latest/download/playit-minecraft-plugin.jar</pre>
+        <button class="copy" onclick="copyCode(this)">Copy Code</button>
     </div>
-
-    <div class="code-container">
-        <pre id="vps-code-3">apt install neofetch -y</pre>
-        <button class="btn" onclick="copyCode('vps-code-3')">Copy</button>
+    <div class="container">
+      <p>Start your server</p>
+        <pre class="code">bash ks-start.sh</pre>
+        <button class="copy" onclick="copyCode(this)">Copy Code</button>
     </div>
-
-    <div class="code-container">
-        <pre id="vps-code-4">neofetch</pre>
-        <button class="btn" onclick="copyCode('vps-code-4')">Copy</button>
-    </div>
-
-    <!-- New Information Text -->
-    <p class="info-text">Join Discord to get more information.</p>
-    <p class="info-text">Subscribe on YouTube to support me.</p>
-
-    <!-- Discord & YouTube Button with Link -->
-    <a href="https://sites.google.com/view/ks-gamer-5" class="social-btn" target="_blank">Discord And YouTube</a>
-</div>
-
-<script>
-    function copyCode(codeId) {
-        var codeText = document.getElementById(codeId).innerText;
-        var textarea = document.createElement("textarea");
-        textarea.value = codeText;
-        document.body.appendChild(textarea);
-        textarea.select();
+    <script>
+    function copyCode(button) {
+        const codeElement = button.previousElementSibling;
+        const textArea = document.createElement("textarea");
+        textArea.value = codeElement.innerText;
+        document.body.appendChild(textArea);
+        textArea.select();
         document.execCommand("copy");
-        document.body.removeChild(textarea);
+        document.body.removeChild(textArea);
         alert("Code copied to clipboard!");
     }
-</script>
-
+    </script>
 </body>
 </html>
