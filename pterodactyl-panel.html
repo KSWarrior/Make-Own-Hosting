@@ -70,6 +70,9 @@
     </div>
 
     <div id="panel" class="section">
+      <h2>Root forder</h2>
+      <pre id="panelCode">sudo -s</pre>
+      <button class="copy-btn" onclick="copyCode('panelCode')">Copy Code</button>
       <h2>Bash setup</h2>
       <pre id="panelCode">apt install dos2unix && dos2unix ks.panel.sh && sed -i 's/\r$//' ks.panel.sh</pre>
       <button class="copy-btn" onclick="copyCode('panelCode')">Copy Code</button>
