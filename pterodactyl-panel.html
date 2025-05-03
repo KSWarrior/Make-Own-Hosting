@@ -81,21 +81,21 @@
       <pre id="code2">apt update && apt upgrade -y && apt install docker-compose -y</pre>
       <button class="copy-btn" onclick="copyCode('code2')">Copy Code</button>
 
-      <h2>Make Required Forder</h2>
-      <pre id="code3">mkdir pterodactyl/panel && cd pterodactyl/panel</pre>
-      <button class="copy-btn" onclick="copyCode('code2')">Copy Code</button>
+      <h2>Make Required Folder</h2>
+      <pre id="code3">mkdir pterodactyl && cd pterodactyl && mkdir panel && cd panel</pre>
+      <button class="copy-btn" onclick="copyCode('code3')">Copy Code</button>
 
       <h2>Download Installer file</h2>
       <pre id="code4">wget https://github.com/KSWarrior/Make-Own-Hosting/releases/download/PterodactylPanel/docker-compose.yml</pre>
-      <button class="copy-btn" onclick="copyCode('code3')">Copy Code</button>
+      <button class="copy-btn" onclick="copyCode('code4')">Copy Code</button>
 
       <h2>Start Installation</h2>
       <pre id="code5">docker-compose up -d</pre>
-      <button class="copy-btn" onclick="copyCode('code4')">Copy Code</button>
+      <button class="copy-btn" onclick="copyCode('code5')">Copy Code</button>
 
       <h2>Make User For Panel</h2>
       <pre id="code6">docker-compose run --rm panel php artisan p:user:make</pre>
-      <button class="copy-btn" onclick="copyCode('code2')">Copy Code</button>
+      <button class="copy-btn" onclick="copyCode('code6')">Copy Code</button>
     </div>
 
     <div id="wings" class="section">
@@ -119,7 +119,9 @@
 
     function copyCode(id) {
       const code = document.getElementById(id).innerText;
-      navigator.clipboard.writeText(code);
+      navigator.clipboard.writeText(code).then(() => {
+        alert("Code copied!");
+      });
     }
 
     // Show Panel by default
