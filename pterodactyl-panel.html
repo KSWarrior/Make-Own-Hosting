@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pterodactyl Installation Guide</title>
   <style>
     body {
@@ -54,9 +54,12 @@
       border-radius: 5px;
       background-color: #3fff05;
       margin-top: 10px;
+      padding: 8px 16px;
+      border: none;
+      cursor: pointer;
     }
     .copy-btn:hover {
-      background-color: #3fff05;
+      background-color: #269106;
     }
   </style>
 </head>
@@ -70,46 +73,49 @@
     </div>
 
     <div id="panel" class="section">
-      <h2>Root forder</h2>
-      <pre id="panelCode">sudo -s</pre>
-      <button class="copy-btn" onclick="copyCode('panelCode')">Copy Code</button>
+      <h2>Root folder</h2>
+      <pre id="code1">sudo -s</pre>
+      <button class="copy-btn" onclick="copyCode('code1')">Copy Code</button>
+
       <h2>Bash setup</h2>
-      <pre id="panelCode">apt install dos2unix && dos2unix ks.panel.sh && sed -i 's/\r$//' ks.panel.sh</pre>
-      <button class="copy-btn" onclick="copyCode('panelCode')">Copy Code</button>
+      <pre id="code2">apt install dos2unix && dos2unix ks.panel.sh && sed -i 's/\r$//' ks.panel.sh</pre>
+      <button class="copy-btn" onclick="copyCode('code2')">Copy Code</button>
+
       <h2>Download Installer file</h2>
-      <pre id="panelCode">wget https://github.com/KSWarrior/Make-Own-Hosting/releases/download/PterodactylPanel/ks.panel.sh</pre>
-      <button class="copy-btn" onclick="copyCode('panelCode')">Copy Code</button>
+      <pre id="code3">wget https://github.com/KSWarrior/Make-Own-Hosting/releases/download/PterodactylPanel/ks.panel.sh</pre>
+      <button class="copy-btn" onclick="copyCode('code3')">Copy Code</button>
+
       <h2>Start Installation</h2>
-      <pre id="panelCode">bash ks.panel.sh</pre>
-      <button class="copy-btn" onclick="copyCode('panelCode')">Copy Code</button>
+      <pre id="code4">bash ks.panel.sh</pre>
+      <button class="copy-btn" onclick="copyCode('code4')">Copy Code</button>
     </div>
 
     <div id="wings" class="section">
-      <h2>coming soon</h2>
+      <h2>Coming Soon</h2>
       <pre id="wingsCode">coming soon</pre>
       <button class="copy-btn" onclick="copyCode('wingsCode')">Copy Code</button>
     </div>
 
     <div id="both" class="section">
-      <h2>coming soon</h2>
+      <h2>Coming Soon</h2>
       <pre id="bothCode">coming soon</pre>
       <button class="copy-btn" onclick="copyCode('bothCode')">Copy Code</button>
     </div>
   </div>
 
-<script>
-  function showSection(id) {
-    document.querySelectorAll('.section').forEach(el => el.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-  }
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(el => el.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
 
-  function copyCode(id) {
-    const code = document.getElementById(id).innerText;
-    navigator.clipboard.writeText(code);
-  }
+    function copyCode(id) {
+      const code = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(code);
+    }
 
-  // Show Panel by default
-  showSection('panel');
-</script>
+    // Show Panel by default
+    showSection('panel');
+  </script>
 </body>
 </html>
