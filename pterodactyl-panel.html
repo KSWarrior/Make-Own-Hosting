@@ -119,9 +119,7 @@
 
     function copyCode(id) {
       const code = document.getElementById(id).innerText;
-      navigator.clipboard.writeText(code).then(() => {
-        alert("Code copied!");
-      });
+      navigator.clipboard.writeText(code);
     }
 
     // Show Panel by default
