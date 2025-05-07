@@ -73,29 +73,13 @@
     </div>
 
     <div id="panel" class="section">
-      <h2>Root folder</h2>
-      <pre id="code1">sudo -s</pre>
+      <h2>Install And Start Panel</h2>
+      <pre id="code1">wget https://github.com/KSWarrior/Make-Own-Hosting/releases/download/PterodactylPanel/panel.sh && bash panel.sh</pre>
       <button class="copy-btn" onclick="copyCode('code1')">Copy Code</button>
 
-      <h2>Install Required Package</h2>
-      <pre id="code2">apt update && apt install docker-compose -y</pre>
+      <h2>Again Start Panel</h2>
+      <pre id="code2">bash again-start-panel.sh</pre>
       <button class="copy-btn" onclick="copyCode('code2')">Copy Code</button>
-
-      <h2>Make Required Folder</h2>
-      <pre id="code3">mkdir pterodactyl && cd pterodactyl && mkdir panel && cd panel</pre>
-      <button class="copy-btn" onclick="copyCode('code3')">Copy Code</button>
-
-      <h2>Download Installer file</h2>
-      <pre id="code4">wget https://github.com/KSWarrior/Make-Own-Hosting/releases/download/PterodactylPanel/panel.yml -O docker-compose.yml</pre>
-      <button class="copy-btn" onclick="copyCode('code4')">Copy Code</button>
-
-      <h2>Start Installation</h2>
-      <pre id="code5">docker-compose up -d</pre>
-      <button class="copy-btn" onclick="copyCode('code5')">Copy Code</button>
-
-      <h2>Make User For Panel</h2>
-      <pre id="code6">docker-compose run --rm panel php artisan p:user:make</pre>
-      <button class="copy-btn" onclick="copyCode('code6')">Copy Code</button>
     </div>
 
     <div id="wings" class="section">
